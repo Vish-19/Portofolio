@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #1f242d;
+    color: #fff;
+}
+
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: SlideRight 1s ease forwards;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.5s;
+    opacity: 0;
+    animation: SlideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover{
+    color: aqua;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+    font-size: 35px;
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    animation: SlideBottom 1s ease forwards;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: SlideTop 1s ease forwards;
+}
+
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    animation: SlideRight 1s ease forwards;
+}
+
+.home-content span{
+    color: aqua;
+}
+
+.home-content p{
+    font-size: 16px;
+    opacity: 0;
+    animation: SlideLeft 1s ease forwards;
+}
+
+.home-img img{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: aqua;
+    color: #1f242d;
+    box-shadow: 0 0 20px aqua;
+    opacity: 0;
+    margin: 30px 15px 30px 0;
+    animation: ZoomIn 1s ease forwards, FloatImage 4s ease-in-out infinite;
+    animation-delay: 1s, 2s;
+}
+
+.home-img img:hover{
+    box-shadow: 0 0 30px aqua;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid aqua;
+    border-radius: 50%;
+    font-size: 20px;
+    color: aqua;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    margin: 30px 15px 30px 0;
+    animation: SlideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover{
+    background-color: aqua;
+    color: #1f242d;
+    box-shadow: 0 0 20px aqua;
+}
+
+
+@keyframes SlideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes SlideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes SlideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes SlideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ZoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes FloatImage{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    0%{
+        transform: translateY(0px);
+    }
+}
+
+.about-img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: aqua;
+    color: #1f242d;
+    box-shadow: 0 0 20px aqua;
+    opacity: 0;
+    margin: 30px 15px 30px 0;
+    animation: ZoomIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.social-media-1 a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: aqua;
+    color: #1f242d;
+    border: 2px solid rgba(0, 123, 255, 0.979);
+    border-radius: 50%;
+    box-shadow: 0 0 10px aqua;
+    font-size: 20px;
+    color: rgba(0, 123, 255, 0.979);
+    opacity: 1;
+    margin: 30px 15px 30px 0;
+}
+
+.social-media-2 a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: aqua;
+    color: #1f242d;
+    border: 2px solid rgba(0, 123, 255, 0.979);
+    border-radius: 50%;
+    box-shadow: 0 0 10px aqua;
+    font-size: 20px;
+    color: rgba(0, 123, 255, 0.979);
+    opacity: 0.8;
+    margin: 30px 15px 30px 0;
+}
+
+.social-media-3 a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: aqua;
+    color: #1f242d;
+    border: 2px solid rgba(0, 123, 255, 0.979);
+    border-radius: 50%;
+    box-shadow: 0 0 10px aqua;
+    font-size: 20px;
+    color: rgba(0, 123, 255, 0.979);
+    opacity: 0.6;
+    margin: 30px 15px 30px 0;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: transparent;
+    border-radius: 40px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    border: 2px solid aqua;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.btn:hover{
+    background-color: aqua;
+    color: #1f242d;
+    box-shadow: 0 0 20px aqua;
+}
+
+/* .frame{
+    border: 0;
+    transform: scale(0.25);
+    -ms-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -o-transform: scale(0.25);
+    -webkit-transform: scale(0.25);
+
+    transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+} */
+
+/* Define the highlight animation */
+@keyframes highlight {
+    0% { background-color: aqua; }
+    100% { background-color: transparent; }
+}
+
+/* Style for the highlighted paragraph */
+.highlighted {
+    animation: highlight 3s;
+}
+
+.con{
+    background-color: #242f3b;
+    text-align: center;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
+    border-radius: 20px;
+}
